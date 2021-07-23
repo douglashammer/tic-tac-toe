@@ -1,8 +1,9 @@
-export const gameBoard = () => {
-	let gameboard = ['X', 'O', 'O', 'X', 'O', 'X', 'X', 'X', 'O'];
+export const gameBoard = (() => {
 
-	const board = document.querySelector('.game-container');
-	board.addEventListener('click', (e) => {
-		console.log(e.target.dataset.cellIndex);
-	});
-};
+	let gameboard = [
+		['X', 'O', 'O'], 
+		['X', 'O', 'X'], 
+		['X', 'X', 'O']
+	];
+	
+})();
