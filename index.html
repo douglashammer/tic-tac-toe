@@ -8,9 +8,46 @@
 	</head>
 	<body>
 		<section>
+			<p>Name: Doug Hammer</br>Date: Nov. 5th, 2021</p>
 			<h1>Tic-Tac-Toe</h1>
-			<div id="game-window"></div>
-			<div class="game-container">
+			<button class="btn play-btn">Let's Play !</button>
+			<div class="start-arrows">
+				<img
+				src="images/arrow.png"
+				style="width: 180px; position: fixed; top: 310px; left: 240px;"
+			/>
+
+			<img
+				src="images/arrow.png"
+				style="width: 180px; position: fixed; top: 310px; left: 720px; transform: scaleX(-1);"
+			/>
+			</div>
+			
+			<img
+				src="images/s.svg.png"
+				style="width: 50px; position: fixed; top: 120px; left: 10px"
+			/>
+
+			<img
+				src="images/sheep.png"
+				style="width: 170px; position: fixed; top: 700px; left: 840px;"
+			/>
+
+			<img
+				src="images/s.svg.png"
+				style="width: 50px; position: fixed; top: 615px; left: 950px; transform: rotate(20deg);"
+			/>
+			<img
+				src="images/hand.png"
+				style="width: 130px; position: fixed; top: 410px; left: 45px"
+			/>
+			<img
+				src="images/book.png"
+				style="width: 280px; position: fixed; top: 650px; left: 0"
+			/>
+		</section>
+		<section>
+			<div class="game-container fadeOut">
 				<div
 					data-cell-index="0"
 					class="cell remove-left-border remove-top-border"
@@ -33,7 +70,7 @@
 					class="cell remove-right-border remove-bottom-border"
 				></div>
 			</div>
-			<button id="reset-btn">Reset</button>
+			<button class="btn reset-btn fadeOut">Reset ?</button>
 		</section>
 
 		<script src="main.js"></script>

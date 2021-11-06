@@ -1,9 +1,9 @@
-const playerCreator = (player, sign, turn) => {
-	return { player, sign, turn };
+const playerCreator = (player, sign, color, turn) => {
+	return { player, sign, color, turn };
 };
 
-const player1 = playerCreator('Player1', 'X', true);
-const player2 = playerCreator('Player2', 'O', false);
+const player1 = playerCreator('Player1', 'X',  '#eb4734', true);
+const player2 = playerCreator('Player2', 'O', '#202473', false);
 
 let turns = 9;
 
@@ -58,11 +58,13 @@ const gameBoard = (() => {
 				let square = e.target;
 				if (square.textContent === '' && winner === null) {
 					if (player1.turn) {
+						cell.style.color = player1.color;
 						square.textContent = player1.sign;
 						player1.turn = false;
 						player2.turn = true;
 						_gameboard[square.dataset.cellIndex] = player1.sign;
 					} else if (player2.turn) {
+						cell.style.color = player2.color;
 						square.textContent = player2.sign;
 						player2.turn = false;
 						player1.turn = true;
@@ -91,17 +93,34 @@ const gameBoard = (() => {
 })();
 
 const displayController = (() => {
-	clearBoard = () => {
-		gameBoard.resetGame();
+	const gameContainer = document.querySelector('.game-container');
+	const startArrows = document.querySelector('.start-arrows');
 
+	const playGame = () => {
+		gameContainer.classList.remove('fadeOut');
+		startArrows.classList.add('fadeOut');
+		playBtn.classList.add('fadeOut');
+		resetBtn.classList.remove('fadeOut');
+	}
+
+	const clearBoard = () => {
+		gameBoard.resetGame();
+		gameContainer.classList.add('fadeOut');
+		startArrows.classList.remove('fadeOut');
+		playBtn.classList.remove('fadeOut');
+		resetBtn.classList.add('fadeOut');
+	
 		document.querySelectorAll('.cell').forEach((cell) => {
 			cell.textContent = '';
 		});
 	};
 
 	// Event Listeners
-	const resetBtn = document.getElementById('reset-btn');
+	const playBtn = document.querySelector('.play-btn');
+	playBtn.addEventListener('click', playGame);
+
+	const resetBtn = document.querySelector('.reset-btn');
 	resetBtn.addEventListener('click', clearBoard);
 
-	return { clearBoard };
+	return { playGame, clearBoard };
 })();

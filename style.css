@@ -1,34 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+
 body {
   text-align: center;
-  font-family: 'Rock Salt', 'cursive';
+	font-family: 'Rock Salt', 'cursive';
+	background-image: url("images/paper.webp");
+	background-repeat: no-repeat;
+	background-size: 1140px ;
+}
+
+p {
+	margin: 0;
+	text-align: left;
+	padding-left: 70px;
+	font-size: 12px;
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 55px;
+	margin: 0;
+	
 }
 
-#game-window {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	font-size: 18px;
+.play-btn {
+	top: 180px;
 }
 
 .game-container {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
-	width: 300px;
-	margin: 50px auto;
+	width: 365px;
+	margin: auto;
 }
 
 .cell {
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	border: 3px solid #333333;
 	cursor: pointer;
-	line-height: 100px;
-	font-size: 60px;
+	line-height: 120px;
+	font-size: 70px;
 }
 
 .remove-left-border {
@@ -47,15 +58,25 @@ h1 {
 	border-bottom: 1px solid transparent;
 }
 
-#reset-btn {
-	background-color: white;
-  color: black;
-  border: 2px solid #4CAF50; 
-  padding: 15px 32px;
+.btn {
+	position: relative;
+	font-family: 'Rock Salt', 'cursive';
+	background-color: transparent;
+	border: none;
+	outline: none;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-	font-size: 25px;
-	width: 150px;
+	font-size: 30px;
+	width: 215px;
+	height: 60px;
 	cursor: pointer;
+}
+
+.reset-btn {
+	top: 45px;
+}
+
+.fadeOut {
+	opacity: 0;
+	pointer-events: none;
 }
