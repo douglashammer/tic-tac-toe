@@ -6,7 +6,7 @@ assignment from [The Odin Project](https://www.theodinproject.com/paths/full-sta
 ![Screenshot of Project](images/ticTacToeImage.png)
 
 ## Technologies/Tools
-Project is created with:
+Project created with:
 * HTML
 * CSS
 * Vanilla JavaScript
