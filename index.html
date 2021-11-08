@@ -7,46 +7,68 @@
 		<title>Tic-tac-toe</title>
 	</head>
 	<body>
-		<section>
-			<p>Name: Doug Hammer</br>Date: Nov. 5th, 2021</p>
+		<div class="game-wrapper">
 			<h1>Tic-Tac-Toe</h1>
+			<h2 class="winner-display fadeOut">Winner :</h2>
 			<button class="btn play-btn">Let's Play !</button>
 			<div class="start-arrows">
 				<img
-				src="images/arrow.png"
-				style="width: 180px; position: fixed; top: 310px; left: 240px;"
-			/>
-
-			<img
-				src="images/arrow.png"
-				style="width: 180px; position: fixed; top: 310px; left: 720px; transform: scaleX(-1);"
-			/>
+					src="images/arrow.png"
+					style="
+						width: 150px;
+						position: absolute;
+						top: 265px;
+						right: 220px;
+						transform: scaleX(-1);
+					"
+				/>
+				<img
+					src="images/arrow.png"
+					style="width: 150px; position: absolute; top: 265px; left: 220px"
+				/>
 			</div>
-			
+			<img
+				src="images/github_icon.png"
+				style="
+					width: 90px;
+					position: absolute;
+					top: 100px;
+					right: 80px;
+					transform: rotate(-15deg);
+				"
+			/>
 			<img
 				src="images/s.svg.png"
-				style="width: 50px; position: fixed; top: 120px; left: 10px"
-			/>
-
-			<img
-				src="images/sheep.png"
-				style="width: 170px; position: fixed; top: 700px; left: 840px;"
-			/>
-
-			<img
-				src="images/s.svg.png"
-				style="width: 50px; position: fixed; top: 615px; left: 950px; transform: rotate(20deg);"
+				style="width: 55px; position: absolute; top: 120px; left: 70px"
 			/>
 			<img
 				src="images/hand.png"
-				style="width: 130px; position: fixed; top: 410px; left: 45px"
+				style="width: 130px; position: absolute; top: 300px; left: 80px"
 			/>
 			<img
 				src="images/book.png"
-				style="width: 280px; position: fixed; top: 650px; left: 0"
+				style="width: 270px; position: absolute; top: 510px; left: 50px"
 			/>
-		</section>
-		<section>
+			<img
+				src="images/sheep.png"
+				style="width: 195px; position: absolute; bottom: 40px; right: 90px"
+			/>
+			<img
+				src="images/s.svg.png"
+				style="
+					width: 60px;
+					position: absolute;
+					bottom: 150px;
+					right: 100px;
+					transform: rotate(37deg);
+				"
+			/>
+
+			<img
+				src="images/pencil.png"
+				style="width: 440px; position: absolute; top: 400px; left: 660px"
+			/>
+
 			<div class="game-container fadeOut">
 				<div
 					data-cell-index="0"
@@ -70,8 +92,8 @@
 					class="cell remove-right-border remove-bottom-border"
 				></div>
 			</div>
-			<button class="btn reset-btn fadeOut">Reset ?</button>
-		</section>
+			<button class="btn reset-btn fadeOut">Reset Game ?</button>
+		</div>
 
 		<script src="main.js"></script>
 	</body>
